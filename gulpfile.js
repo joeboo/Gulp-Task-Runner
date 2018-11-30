@@ -119,7 +119,7 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('css'));
 });
 
-// Gulp Compile SASS Task
+// Gulp Compile JADE
 gulp.task('jade', function() {
     return gulp.src("jade/index.jade")
         .pipe(jade({
@@ -131,7 +131,7 @@ gulp.task('jade', function() {
 
 
 // Gulp Watch Task
-gulp.task('watchFile', function() {
+gulp.task('development', function() {
     // The first gulp.watch method only watches the Sass files, and then only runs the compileSass task when they change.
     gulp.watch('sass/**/*.sass', 'sass/**/*.scss', ['sass']);
 
